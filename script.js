@@ -10,23 +10,32 @@ function convertToRoman(num) {
   var i = 0;
   
   switch (length) {
-      
+switch (length) {
     case 4:
       roman = thousands[numbers[i]];
       i++;
-      
+      break; // Add break to exit the switch
+
     case 3:
       roman += hundreds[numbers[i]];
       i++;
-      
+      break; // Add break to exit the switch
+
     case 2:
       roman += tens[numbers[i]];
       i++;
-      
-    case 1 :
+      break; // Add break to exit the switch
+
+    case 1:
       roman += singles[numbers[i]];
+      break; // Add break to exit the switch
+
+    default:
+      // Handle the case when num is 0
+      roman = "N/A"; // You can change this to an empty string or any appropriate message
   }
- return roman;
+  
+  return roman;
 }
 
 // // do not edit below this line
